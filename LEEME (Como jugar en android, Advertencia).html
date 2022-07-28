@@ -244,21 +244,104 @@
       text-align:center;
       font-size: 14px;
    }
-   
-   
-
-  .creditos-lista{
-      width:33.33%;
-      list-style:none;
-      padding-left:0px;
-      float:left;
-      display:block;
-  }
-  .creditos-lista li{
-      margin-bottom:5px;
-  }
-
+   img.avatar {
+      border-radius: 100%;
+      max-width: 60px;
+   }
+   .special-thanks {
+      display: flex;
+      flex-direction: column;
+      
+   }
+   .team {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 2rem;
+   }
+   .team div {
+      margin-right: 1rem;
+   }
+   .texto-gracias {
+      border-top: 1px solid #e9ecef;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+   }
+   .texto-gracias p {
+      margin-top: 0;
+   }
+   .tab-titulo-acordeon {
+      position: relative;
+      cursor: pointer;
+      padding: 0.75rem 0;
+      color: #121416;
+      border: 0px;
+      border-top: 1px solid #e9ecef;
+      text-decoration: none !important;
+      box-shadow: none !important;
+      transition: .3s;
+   }
+   .tab-titulo-acordeon:first-child {
+      border-top: 0;
+   }
+   .tab-titulo-acordeon:after {
+	   position: absolute;
+	   content: "\e914 a";
+	   color: #121416;
+      right: 0;
+	   transition: transform 0.2s;
+	   font-weight: 700;
+	   font-size: 1.5em;
+	   line-height: 1;
+   }
+   .tab-contenido-acordeon {
+	   overflow: hidden;
+	   transition: all 0.2s ease-out; 
+	   max-height: 0;
+	   height: auto;
+	   color: #121416;
+      font-family: inherit;
+      font-size: 0.875rem;
+      letter-spacing: inherit;
+   }
+   .tab-titulo-acordeon.open ~ .tab-contenido-acordeon .contenido-acor {
+      padding: .75rem 0;
+   }
+   .tab-titulo-acordeon.open:after {
+	   content: "\e914";
+	   transform: rotate(90deg);
+   }
+   .tab-titulo-acordeon.open + .tab-contenido-acordeon {
+      max-height: 1000px;
+   }
 </style>
+<script>
+   // Accordeon
+   function acordeon (target, one) {
+      target = document.getElementById(target);
+      target.classList.add("awrap");
+
+      if (typeof one != "boolean") { one = false; }
+      let head = target.getElementsByClassName("tab-titulo-acordeon");
+
+      if (one) {
+         for (let h of head) {
+            h.addEventListener("click", function(){
+            for (let e of head) { 
+               if (e != this) { e.classList.remove("open");  }
+               else { this.classList.toggle("open"); }
+            }
+            });
+         }
+      } else {
+         for (let h of head) {
+            h.addEventListener("click", function(){
+            this.classList.toggle("open");
+            });
+         }
+      }
+   }
+</script>
 </head>
 <body>
    <div class="content">
@@ -362,71 +445,105 @@
             <hr />
             <h2>Cr&eacute;ditos y Recursos:</h2>
             <p>Gr&aacute;ficos, m&uacute;sica y efectos de sonido pertenecen a los siguientes juegos listados:</p>
-            <ul class="creditos-lista">
-               <li><strong>GR&Aacute;FICOS:</strong></li>
-               <li>Demon Hunter Legend 1, 2, 3 & 4 *</li>
-               <li>Fairy Magic Robbery of Killing Law</li>
-               <li>Castle of Shadows</li>
-               <li>Soul of Darkness</li>
-               <li>Castlevania: Dracula X / Vampire's Kiss</li>
-               <li>Castlevania: Dawn of Sorrow</li>
-               <li>Castlevania: Order of Ecclesia</li>
-               <li>Castlevania: Symphony of the Night</li>
-               <li>Castlevania: Portrait of Ruin</li>
-               <li>Castlevania: Rondo of Blood</li>
-               <li>Castlevania: Harmony of Despair</li>
-               <li>spriters-resource.com & spritedatabase.net</li>
-               <li>&nbsp;</li>
-               <li><i>* No estoy seguro si es su nombre real.</i></li>
-               <li>&nbsp;</li>
-               <li><strong>MOTOR USADO:</strong></li>
-               <li>OpenBOR</li>
-            </ul>
-            <ul class="creditos-lista">
-               <li><strong>RIPEADOS POR:</strong></li>
-               <li>Rasgar</li>
-               <li>SmithyGCN</li>
-               <li>Badbatman3</li>
-               <li>Yawackhary</li>
-               <li>Quetzal</li>
-               <li>Crayola</li>
-               <li>blackhook</li>
-               <li>Geckosan</li>
-               <li>Gemini</li>
-               <li>Ridureyu</li>
-               <li>YamiMarik1994</li>
-               <li>Soldjermon</li>
-               <li>elpegaso7</li>
-               <li>Hydorah</li>
-               <li>ZetTheLegendaryHero</li>
-               <li>radical dreamer</li>
-            </ul>
-            <ul class="creditos-lista">
-               <li><strong>M&Uacute;SICA:</strong></li>
-               <li>Oz, The Sword of Etheria</li>
-               <li>Castlevania: Lord of Shadows</li>
-               <li>Castlevania: Lament of Innocence</li>
-               <li>Bloodstained: Ritual of the Night</li>
-               <li>Gungage</li>
-               <li>&nbsp;</li>
-               <li><strong>EFECTOS DE SONIDO:</strong></li>
-               <li>Castlevania: Symphony of the Night</li>
-               <li>Castlevania: Order of Ecclesia</li>
-               <li>Castlevania: Judgement</li>
-               <li>Castlevania Chronicles</li>
-               <li>Castlevania: Dawn of Sorrow</li>
-               <li>Castlevania: Circle of the Moon</li>
-               <li>Castlevania Bloodlines</li>
-               <li>Guardians</li>
-               <li>Street Fighter 2</li>
-            </ul>
-            <div style="clear:both;"></div>
+            <div id="todos-abiertos">
+               <div class="tab-titulo-acordeon">Gr&aacute;ficos</div>
+               <div class="tab-contenido-acordeon">
+                  <div class="contenido-acor">
+                     <ul class="pk-list-styled">
+                        <li>Demon Hunter Legend 1, 2, 3 & 4 *</li>
+                        <li>Fairy Magic Robbery of Killing Law</li>
+                        <li>Castle of Shadows</li>
+                        <li>Soul of Darkness</li>
+                        <li>Castlevania: Dracula X / Vampire's Kiss</li>
+                        <li>Castlevania: Dawn of Sorrow</li>
+                        <li>Castlevania: Order of Ecclesia</li>
+                        <li>Castlevania: Symphony of the Night</li>
+                        <li>Castlevania: Portrait of Ruin</li>
+                        <li>Castlevania: Rondo of Blood</li>
+                        <li>Castlevania: Harmony of Despair</li>
+                        <li>spriters-resource.com & spritedatabase.net</li>   
+                     </ul>
+                     <i>* No estoy seguro si es su nombre real.</i>
+                  </div>
+               </div>
+               <div class="tab-titulo-acordeon">Algunos gr&aacute;ficos fueron rippeados por:</div>
+               <div class="tab-contenido-acordeon">
+                  <div class="contenido-acor">
+                     <ul class="pk-list-styled">
+                        <li>Rasgar</li>
+                        <li>SmithyGCN</li>
+                        <li>Badbatman3</li>
+                        <li>Yawackhary</li>
+                        <li>Quetzal</li>
+                        <li>Crayola</li>
+                        <li>blackhook</li>
+                        <li>Geckosan</li>
+                        <li>Gemini</li>
+                        <li>Ridureyu</li>
+                        <li>YamiMarik1994</li>
+                        <li>Soldjermon</li>
+                        <li>elpegaso7</li>
+                        <li>Hydorah</li>
+                        <li>ZetTheLegendaryHero</li>
+                        <li>radical dreamer</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="tab-titulo-acordeon">M&uacute;sica</div>
+               <div class="tab-contenido-acordeon">
+                  <div class="contenido-acor">
+                     <ul class="pk-list-styled">
+                        <li>Oz, The Sword of Etheria</li>
+                        <li>Castlevania: Lord of Shadows</li>
+                        <li>Castlevania: Lament of Innocence</li>
+                        <li>Bloodstained: Ritual of the Night</li>
+                        <li>Gungage</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="tab-titulo-acordeon">Efectos de sonido</div>
+               <div class="tab-contenido-acordeon">
+                  <div class="contenido-acor">
+                     <ul class="pk-list-styled">
+                        <li>Castlevania: Symphony of the Night</li>
+                        <li>Castlevania: Order of Ecclesia</li>
+                        <li>Castlevania: Judgement</li>
+                        <li>Castlevania Chronicles</li>
+                        <li>Castlevania: Dawn of Sorrow</li>
+                        <li>Castlevania: Circle of the Moon</li>
+                        <li>Castlevania Bloodlines</li>
+                        <li>Guardians</li>
+                        <li>Street Fighter 2</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="tab-titulo-acordeon">Motor Usado</div>
+               <div class="tab-contenido-acordeon">
+                  <ul class="pk-list-styled">
+                     <li>Beats of Rage (OpenBOR)</li>
+                  </ul>
+               </div>
+            </div>
+            <hr />
             <h2>Agradecimientos Especiales</h2>
-            <p>A <strong>Bloodbane</strong> sin tu ayuda este juego no habr&iacute;a sido posible :D .</p>
-            <p>Visiten su <a href="https://gamejolt.com/@DarkBloodbane" target="_blank">Perfil en Gamejolt (Sólo en ingl&eacute;s)</a> para ver sus geniales proyectos.</p>
-            <p>To <strong>DegelB [Fandub]</strong> y su equipo, por el doblaje en espa&ntilde;ol latino :D .</p>
-            <p>Visiten su <a href="https://www.youtube.com/c/YahikoIKUSTAKA" target="_blank">canal de Youtube</a> para ver y estuchar m&aacute; si te gusta su trabajo.</p>
-            <div style="clear:both;"></div>
+            <div class="special-thanks">
+               <div class="team">
+                  <div><a href="https://gamejolt.com/@DarkBloodbane" target="_blank"><img class="avatar" src="https://i.imgur.com/uY1PI6T.jpg" /></a></div>
+                  <div><h3>BloodBane</h3></div>
+               </div>
+               <div class="texto-gracias">
+                  <p>Sin tu ayuda con varios bugs y soporte con la herramienta este videojuego no habr&iacute;a sido posible. Visiten su <a href="https://gamejolt.com/@DarkBloodbane" target="_blank">Perfil en Gamejolt (S&oacute;lo en ingl&eacute;s)</a> para ver sus geniales proyectos.</p>
+               </div>
+            </div>
+            <div class="special-thanks">
+               <div class="team">
+                  <div><a href="https://www.youtube.com/c/YahikoIKUSTAKA" target="_blank"><img class="avatar" src="https://i.imgur.com/idp9O1D.jpg" /></a></div>
+                  <div><h3>DegelB [Fandub]</h3></div>
+               </div>
+               <div class="texto-gracias">
+                  <p>Gracias a t&iacute; y a tu equipo, por el doblaje en espa&ntilde;ol latino :D . Visiten su <a href="https://www.youtube.com/c/YahikoIKUSTAKA" target="_blank">canal de Youtube</a> para ver y estuchar m&aacute;s de su trabajo si te gust&oacute; el doblaje.</p>
+               </div>
+            </div>
             <a name="mobile"></a>
             <hr />
             <h2><strong>C&oacute;mo jugar en Android:</strong></h2>
@@ -496,6 +613,11 @@
                }
             })
          }
+      });
+
+      window.addEventListener("DOMContentLoaded", function(){
+         acordeon("todos-abiertos");
+         acordeon("solo-uno-abierto", true);
       });
    </script>
 </body>
