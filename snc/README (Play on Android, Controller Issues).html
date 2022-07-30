@@ -206,6 +206,9 @@
       margin-bottom: 1rem;
       background: #F8F9FA;
    }
+   .alerta.roja {
+      border-left: red 2px solid;
+   }
    table {
       width: 100%;
       max-width: 100%;
@@ -251,7 +254,6 @@
    .special-thanks {
       display: flex;
       flex-direction: column;
-      
    }
    .team {
       display: flex;
@@ -318,6 +320,64 @@
    .tab-titulo-acordeon.open + .tab-contenido-acordeon {
       max-height: 1000px;
    }
+   .pk-toc {
+      background: #f9f9f9;
+      border: 1px solid #aaa;
+      padding: 10px;
+      margin-bottom: 1em;
+      width: auto;
+      display: table;
+   }
+   .pk-toc a {
+      text-decoration: none;
+   }
+   .pk-toc-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.125em;
+      text-transform: uppercase;
+      color: #000000;
+      font-weight: 700;
+      justify-content: center;
+   }
+   .pk-toc ol {
+      list-style: none;
+      font-size: 16px;
+      padding-left: 0;
+   }
+   .pk-toc ol li {
+      position: relative;
+      padding-left: 2.5rem;
+   }
+   .pk-toc ul {
+      list-style: none;
+      position: relative;
+      font-size: 14px;
+   }
+   .pk-toc ul li {
+      margin-top: 0.25rem;
+   }
+   .pk-toc ul.pk-list-styled > li:before {
+      margin-top: 0.55rem;
+   }
+   .pk-toc ul.pk-list-styled > li:not(:first-child) {
+      margin-top: 0.25rem;
+   }
+   .pk-toc ol > li span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: #E9ECEF;
+      color: #495079;
+      border-radius: 100%;
+   }
 </style>
 <script>
    // Accordeon
@@ -360,25 +420,63 @@
          </div>
          <article>
             <p>Esta es la quinta versi&oacute;n desde su lanzamiento de encontrarse bugs o glitches <a href="#bug-glitch">no listados</a> reportarlos en <a href="https://trueroledreams.org/" target="_blank">trueroledreams.org</a>.</p>
-            <p>Si quieres informaci&oacute;n sobre <strong>como jugar Silver Night's Crusaders en Android has <a href="#mobile">click aqu&iacute;</a></strong></p>
-            <h2>&iquest;Qu&eacute; trae esta nueva versi&oacute;n?</h2>
+            <div class="pk-toc">
+               <h5 class="pk-toc-title">Table of Contents</h5>
+               <ol>
+                  <li>
+                     <span>1</span><a href="#novedades">&iquest;Qu&eacute; trae esta nueva versi&oacute;n?</a>
+                     <ul class="pk-list-styled">
+                        <li>
+                           <a href="#actualizar">Upgrade to this version without losing progress or unlockables</a>
+                        </li>
+                        <li>
+                           <a href="#comparte">Share the game</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <span>2</span><a href="#configuracion">Configuraci&oacute;n de Control</a>
+                     <ul class="pk-list-styled">
+                        <li>
+                           <a href="#problemas-control"><strong>Controller Issues</strong></a>
+                        </li>
+                        <li>
+                           <a href="#incompatibilidad-control">Possible incompatibility with Xbox controllers</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <span>3</span><a href="#bug-sin-solucion">List of bugs and glitches unfixed</a>
+                  </li>
+                  <li>
+                     <span>4</span><a href="#creditos">Credits and Resources</a>
+                  </li>
+                  <li>
+                     <span>5</span><a href="#agradecimientos">Special Thanks</a>
+                  </li>
+                  <li>
+                     <span>6</span><a href="#jugar-en-android"><strong>How to play on Android</strong></a>
+                  </li>
+               </ol>
+            </div>
+            <h2 id="novedades">&iquest;Qu&eacute; trae esta nueva versi&oacute;n?</h2>
             <ul class="pk-list-styled">
                <li>Nerfeo a enemigos y jefes: Sucubus, Flamataura, Bafomet, Caballero demonio, Payaso asesino y Mirada maligna</li>
                <li>A&ntilde;adidos ligeros cambios al nivel de la biblioteca</li>
                <li>Reducida la resistencia de enemigos invocados (por Fizcko y la Succubus).</li>
                <li>Arreglados otros bug menores.</li>
             </ul>
-            <h3>Upgrade to this version without losing progress or unlockables</h3>
+            <h3 id="actualizar">Upgrade to this version without losing progress or unlockables</h3>
             <p>Simply replace the new "Saves" folder with the "Saves" folder from the previous version, you will keep not just the progress and unlockables but also the score and control settings.</li>
-            <h2>Share the game</h2>
+            <h3 id="comparte">Share the game</h3>
             <p>I would appreciate the disclosure and recommendation of the game, but please do it using its official website link:</p>
             <div class="enlace-compartir">
                <a class="enlace" href="https://trueroledreams.org/games/snc/index.php?cod_idioma=1" target="_blank"><strong>Silver Night's Crusaders oficial website</strong></a>
             </div>
             <p><strong>The official website will always give you the last version of the video game</strong> and if the download link is broken, you can report it immediately at <a href="mailto:trueroledreams@gmail.com">trueroledreams@gmail.com</a>.</p>
             <hr />
-            <h2>Configuraci&oacute;n de Control por defecto:</h2>
-            <p>Al ser un videojuego para PC, los controles por defecto son con teclado pero pueden ser configurados a gusto para usar un joystick:</p>
+            <h2 id="configuracion">Configuraci&oacute;n de Control por defecto:</h2>
+            <p>For being a PC video game, the default controls are from keyboard but you can set it to your liking if you want to use a joystick:</p>
             <table width="100%" border="1" cellpadding="0" cellspacing="0">
                <tr>
                   <th width="25%">Command</th>
@@ -429,28 +527,30 @@
                   <td>Enter</td>
                </tr>
             </table>
-            <h3>Controller Issues</h3>
-            <p>If you have problems with the control settings just delete the "Saves" folder (or just delete the "Silver_Night's_Crusaders_(L).cfg" file).</p>
-            <p>The OpenBOR configuration will go to default, so you can configure everything again.</p>
-            <hr />
-            <a name="bug-glitch"></a>
-            <h2>List of bugs and glitches unfixed</h2>
-            <p>Estos errores no s&eacute; cuando los corregir&eacute;, pero si encuentran glitches muy notorios o bug que crasheen el videojuego reportarlos en la <a href="https://trueroledreams.org/contacto" target="_blank"></a>p&aacute;gina de contacto</a> de True Role Dreams:</p>
-            <h3 style="color:#F90">Lista de Glitches:</h3>
-            <ul class="pk-list-styled">
-               <li><strong>No se ejecut&oacute; el Escudo Helado de Sheeba</strong><br />Puede que Sheeba no ejecute el conjuro o no se lance al momento, de emplear el conjuro hacerlo desde una ubicaci&oacute;n segura estando en el suelo.</li>
-            </ul>
-            <h3 style="color:#F00">Lista de Bugs:</h3>
-            <ul class="pk-list-styled">
-               <li>Ninguno hasta el momento, todos han sido corregidos.</li>
-            </ul>
-            <p><strong>NOTA:</strong> Los bugs y glitches solo son para la versi&oacute;n de PC, no me hago responsable de bug ocasionados por emuladores de OpenBOR en consolas, android u otros dispositivos.</p>
+            <div class="alerta roja">
+               <h3 id="problemas-control">Controller Issues</h3>
+               <p>If you have problems with the control settings just delete the "Saves" folder (or just delete the "Silver_Night's_Crusaders_(L).cfg" file).</p>
+               <p>The OpenBOR configuration will go to default, so you can configure everything again.</p>
+            </div>
             <div class="alerta">
-               <h3>Posible incompatibilidad con mandos de Xbox</h3>
+               <h3 id="incompatibilidad-control">Possible incompatibility with Xbox controllers</h3>
                <p>Este videojuego corre en OpenBOR un freeware elaborado por Senile Team, y creo que a&uacute;n tienen <a href="http://www.chronocrash.com/forum/index.php?topic=4005.0" target="_blank">problemas de incompatibilidad con ciertos perif&eacute;ricos</a>. As&iacute; que recomiendo usar un joystick para PC o teclado para poder jugar, son los dispositivos con los que este juego fue testeado.</p>
             </div>
             <hr />
-            <h2>Credits and Resources:</h2>
+            <a name="bug-glitch"></a>
+            <h2 id="bug-sin-solucion">List of bugs and glitches unfixed</h2>
+            <p>I don't know when I will correct these errors, but if you find very notorious glitches or bugs that crash the video game, report them on the True Role Dreams <a href="https://trueroledreams.org/contacto" target="_blank">contact page</a>:</p>
+            <h3 style="color:#F90">Glitches List:</h3>
+            <ul class="pk-list-styled">
+               <li><strong>Sheeba's didn't cast her frost shield</strong><br />Sheeba may not cast the spell or not cast it immediately, if you want to cast the spell do it from a safe location on the ground.</li>
+            </ul>
+            <h3 style="color:#F00">Bug List</h3>
+            <ul class="pk-list-styled">
+               <li>None so far, all have been fixed.</li>
+            </ul>
+            <p><strong>NOTE:</strong> Bugs and glitches are only for the PC version, I am not responsible for bugs caused by OpenBOR emulators on consoles, android or other devices.</p>
+            <hr />
+            <h2 id="creditos">Credits and Resources</h2>
             <p>Graphics, music and sound effects belong to the following listed games:</p>
             <div id="todos-abiertos">
                <div class="tab-titulo-acordeon">Graphics</div>
@@ -556,14 +656,14 @@
                </div>
             </div>
             <hr />
-            <h2>Special Thanks</h2>
+            <h2 id="agradecimientos">Special Thanks</h2>
             <div class="special-thanks">
                <div class="team">
                   <div><a href="https://gamejolt.com/@DarkBloodbane" target="_blank"><img class="avatar" src="https://i.imgur.com/uY1PI6T.jpg" /></a></div>
                   <div><h3>BloodBane</h3></div>
                </div>
                <div class="texto-gracias">
-                  <p>Sin tu ayuda con varios bugs y soporte con la herramienta este videojuego no habr&iacute;a sido posible. Visiten su <a href="https://gamejolt.com/@DarkBloodbane" target="_blank">Perfil en Gamejolt (S&oacute;lo en ingl&eacute;s)</a> para ver sus geniales proyectos.</p>
+                  <p>Without your help with various bugs and the engine support this game wouldn't have been possible. Visit his <a href="https://gamejolt.com/@DarkBloodbane" target="_blank">Gamejolt Profile (English only)</a> to see his cool projects.</p>
                </div>
             </div>
             <div class="special-thanks">
@@ -572,15 +672,14 @@
                   <div><h3>DegelB [Fandub]</h3></div>
                </div>
                <div class="texto-gracias">
-                  <p>Gracias a t&iacute; y a tu equipo, por el doblaje en espa&ntilde;ol latino :D . Visiten su <a href="https://www.youtube.com/c/YahikoIKUSTAKA" target="_blank">canal de Youtube</a> para ver y estuchar m&aacute;s de su trabajo si te gust&oacute; el doblaje.</p>
+                  <p>Thanks to you and your team, for the spanish volice acting for the game :D . Visit his <a href="https://www.youtube.com/c/YahikoIKUSTAKA" target="_blank">YouTube channel</a> to see and listen to more of his work if you liked it.</p>
                </div>
             </div>
-            <a name="mobile"></a>
             <hr />
-            <h2><strong>How to play on Android:</strong></h2>
+            <h2 id="jugar-en-android"><strong>How to play on Android</strong></h2>
             <p>There isn't an official apk to play Silver Night's Crusaders on Android currently, but it's possible to play it using an OpenBOR Emulator (which is the engine I used to create this videogame).</p>
             <p><a href="https://trueroledreams.org/instalar-juegos-de-openbor-en-tu-android/" target="_blank">Check this tutorial to install the emulator</a> and .pak files (these are the games "roms" created with OpenBOR).</p>
-            <p><strong>Hay una versi&oacute;n de Silver Night's Crusaders que cre&eacute; especialmente para jugar en el emulador <a href="https://trueroledreams.org/games/snc" target="_blank">Desc&aacute;rgala desde el sitio web oficial</a>.</strong></p>
+            <p><strong>There is a version of Silver Night's Crusaders that I created. especially for playing on the emulator <a href="https://trueroledreams.org/games/snc/index.php?cod_idioma=1" target="_blank">Download it from the official website</a>.</strong></p>
          </article>
       </section>
       <aside>
