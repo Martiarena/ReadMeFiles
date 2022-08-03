@@ -406,7 +406,6 @@
    }
 </style>
 <script>
-   // Accordeon
    function acordeon (target, one) {
       target = document.getElementById(target);
       target.classList.add("awrap");
@@ -489,8 +488,8 @@
             </div>
             <h2 id="novedades">&iquest;Qu&eacute; trae esta nueva versi&oacute;n?</h2>
             <ul class="pk-list-styled">
-               <li>Nerfeo a enemigos y jefes: Sucubus, Flamataura, Bafomet, Caballero demonio, Payaso asesino y Mirada maligna</li>
-               <li>A&ntilde;adidos ligeros cambios al nivel de la biblioteca</li>
+               <li>Nerfeo a enemigos y jefes: Sucubus, Flamataura, Bafomet, Caballero demonio, Payaso asesino y Mirada maligna.</li>
+               <li>A&ntilde;adidos ligeros cambios al nivel de la biblioteca.</li>
                <li>Reducida la resistencia de enemigos invocados (por Fizcko y la Succubus).</li>
                <li>Arreglados otros bug menores.</li>
             </ul>
@@ -503,7 +502,7 @@
             </div>
             <p><strong>El sitio web oficial siempre te dar&aacute; la versi&oacute;n m&aacute;s actual del videojuego</strong> y si el enlace se rompe, puedes reportarmelo inmediatamente a <a href="mailto:trueroledreams@gmail.com">trueroledreams@gmail.com</a>.</p>
             <hr />
-            <h2 id="configuracion">Configuraci&oacute;n de Control por defecto:</h2>
+            <h2 id="configuracion">Configuraci&oacute;n de Control por defecto</h2>
             <p>Al ser un videojuego para PC, los controles por defecto son con teclado pero pueden ser configurados a gusto para usar un joystick:</p>
             <table width="100%" border="1" cellpadding="0" cellspacing="0">
                <tr>
@@ -567,17 +566,17 @@
             <hr />
             <h2 id="bug-sin-solucion">Lista de Bugs y Glitches no solucionados</h2>
             <p>Estos errores no s&eacute; cuando los corregir&eacute;, pero si encuentran glitches muy notorios o bug que crasheen el videojuego reportarlos en la <a href="https://trueroledreams.org/contacto" target="_blank"></a>p&aacute;gina de contacto</a> de True Role Dreams:</p>
-            <h3 style="color:#F90">Lista de Glitches:</h3>
+            <h3 style="color:#F90">Lista de Glitches</h3>
             <ul class="pk-list-styled">
                <li><strong>No se ejecut&oacute; el Escudo Helado de Sheeba</strong><br />Puede que Sheeba no ejecute el conjuro o no se lance al momento, de emplear el conjuro hacerlo desde una ubicaci&oacute;n segura estando en el suelo.</li>
             </ul>
-            <h3 style="color:#F00">Lista de Bugs:</h3>
+            <h3 style="color:#F00">Lista de Bugs</h3>
             <ul class="pk-list-styled">
                <li>Ninguno hasta el momento, todos han sido corregidos.</li>
             </ul>
             <p><strong>NOTA:</strong> Los bugs y glitches solo son para la versi&oacute;n de PC, no me hago responsable de bug ocasionados por emuladores de OpenBOR en consolas, android u otros dispositivos.</p>
             <hr />
-            <h2 id="creditos">Cr&eacute;ditos y Recursos:</h2>
+            <h2 id="creditos">Cr&eacute;ditos y Recursos</h2>
             <p>Gr&aacute;ficos, m&uacute;sica y efectos de sonido pertenecen a los siguientes juegos listados:</p>
             <div id="todos-abiertos">
                <div class="tab-titulo-acordeon">Gr&aacute;ficos</div>
@@ -703,7 +702,7 @@
                </div>
             </div>
             <hr />
-            <h2 id="jugar-en-android"><strong>C&oacute;mo jugar en Android:</strong></h2>
+            <h2 id="jugar-en-android"><strong>C&oacute;mo jugar en Android</strong></h2>
             <p>Actualmente no hay una apk oficial para jugar Silver Night's Crusaders en Android, pero es posible hacerlo mediante un Emulador de OpenBOR (que es la herramienta con la que se hizo el juego)</p>
             <p><a href="https://trueroledreams.org/instalar-juegos-de-openbor-en-tu-android/" target="_blank">Revisa este tutorial para de Instalaci&oacute;n del emulador</a> y archivos .pak (son los juegos hechos en OpenBOR).</p>
             <p><strong>Hay una versi&oacute;n de Silver Night's Crusaders que cre&eacute; especialmente para jugar en el emulador <a href="https://trueroledreams.org/games/snc" target="_blank">Desc&aacute;rgala desde el sitio web oficial</a>.</strong></p>
@@ -729,7 +728,7 @@
             </div>
             <div class="widget games">
                <h5>M&aacute;s juegos de True Role Dreams:</h5>
-               <a href="https://trueroledreams.org/games/nlf/" target="_blank"><img src="https://i.imgur.com/ssRQQzH.gif" /></a><br>
+               <a href="https://trueroledreams.org/games/nlf/" target="_blank"><img src="https://i.imgur.com/ALxBKNJ.gif" /></a><br>
                <a href="https://trueroledreams.org/games/snc/" target="_blank"><img src="https://i.imgur.com/RJNIl5p.gif" /></a>
             </div>
          </div>
@@ -737,7 +736,6 @@
    </div>
    <div id="disclaimer"></div>
    <script>
-      // Fixed SideBar
       function offset(elt) {
          let rect = elt.getBoundingClientRect(); 
          let bodyElt = document.body;
@@ -746,6 +744,7 @@
             left: rect.left + bodyElt .scrollLeft
          }
       }
+
       window.addEventListener("load", function(){
          if(document.getElementById("sidebar")){
             const sidebar = document.getElementById("sidebar");
@@ -776,22 +775,21 @@
          acordeon("solo-uno-abierto", true);
       });
 
-      // Home Button
       function trackScroll() {
-            var scrolled = window.pageYOffset;
-            var coords = document.documentElement.clientHeight;
+         var scrolled = window.pageYOffset;
+         var coords = document.documentElement.clientHeight;
 
-            if (scrolled > coords) {
-               goTopBtn.classList.add('btn-inicio-mostrar');
-            }
-            if (scrolled < coords) {
-               goTopBtn.classList.remove('btn-inicio-mostrar');
-            }
+         if (scrolled > coords) {
+            goTopBtn.classList.add('btn-inicio-mostrar');
          }
-         var goTopBtn = document.querySelector('.btn-inicio');
+         if (scrolled < coords) {
+            goTopBtn.classList.remove('btn-inicio-mostrar');
+         }
+      }
+      var goTopBtn = document.querySelector('.btn-inicio');
 
-         window.addEventListener('scroll', trackScroll);
-         goTopBtn.addEventListener('click', backToTop);
+      window.addEventListener('scroll', trackScroll);
+      goTopBtn.addEventListener('click', backToTop);
    </script>
 </body>
 </html>
