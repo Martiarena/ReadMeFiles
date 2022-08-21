@@ -1,0 +1,484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Descargar M&aacute;s Mapas | L&eacute;eme</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+   html {
+      scroll-behavior: smooth;
+   }
+   body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #121416;
+      text-align: left;
+      background-color: #fff;
+   }
+   h1, h2, h3, h4, h5, h6 {
+      font-family: jost,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      text-transform: none;
+      margin-top: 0;
+      margin-bottom: 0;
+   }
+   h1 {
+      font-size: 3rem;
+   }
+   h2 {
+      font-size: 2rem;
+   }
+   h3 {
+      font-size: 1.75rem;
+   }
+   h4 {
+      font-size: 1.5rem;
+   }
+   h5 {
+      font-size: 1.25rem;
+   }
+   h6 {
+      font-size: 1rem;
+   }
+   a {
+      color: #00648d;
+      transition: .2s color ease;
+   }
+   a:hover {
+      text-decoration: none;
+   }
+   .title-stroke {
+      margin-top: 16px;
+   }
+   .title-stroke:after {
+      background: url("https://i.imgur.com/VQBBwFQ.jpg") repeat-x 0 center;
+      background-size: contain;
+      max-width: 180px;
+      height: 18px;
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
+      content: '';
+   }
+   img.tuto {
+      width: 100%;
+      border: 3px solid #ced4da;
+   }
+   .content {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      margin: auto;
+      justify-content: space-between;
+      padding: 4rem 0;
+   }
+   section {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: flex-start;
+   }
+   .fecha {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+   .fecha ul {
+      margin-top: 1rem;
+      margin-right: 0.5rem;
+      list-style: none;
+      color: #b7b9c2;
+      padding-left: 0;
+      display: flex;
+      justify-content: space-between;
+   }
+   .fecha ul li {
+      margin-right: 1rem;
+   }
+   article {
+      max-width: 680px;
+      width: 100%;
+      display: block;
+      margin: auto;
+   }
+   aside {
+      position: relative;
+      width: 100%;
+      padding-right: 20px;
+      padding-left: 20px;
+      flex: 0 0 300px;
+      max-width: 300px;
+   }
+   .widget {
+      margin: 0 0 3rem;
+   }   
+   aside h5 {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.125em;
+      text-transform: uppercase;
+      color: #000000;
+      margin-bottom: 1.5rem;
+   }
+   .advertencia {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      background-color: black;
+   }
+   .advertencia h5 {
+      color: red;
+      margin-bottom: 0.25rem;
+      font-size: 1.5rem;
+   }
+   .advertencia p {
+      color: white;
+      margin-bottom: 0;
+      margin-top: 1rem;
+   }
+   .games img {
+      margin-bottom: 0.5rem;
+   }
+   .redes-sociales {
+      display: flex;
+      justify-content: flex-start;
+      list-style: none;
+      padding-left: 0;
+   }
+   .redes-sociales li {
+      margin-right: 0.4rem;
+   }
+   .redes-sociales li img {
+      width: 32px;
+      display: block;
+   }
+   hr {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      border-top: 0;
+      border-bottom: 1px solid #0584CC;
+   }
+   .fixed {
+      position: fixed;
+   }
+   #sidebar {
+      width: 100%;
+      max-width: 300px;
+   }
+   ul.pk-list-styled {
+      list-style: none;
+      padding-left: 0;
+   }
+   ul.pk-list-styled > li {
+      position: relative;
+      padding-left: 2.5rem;
+   }
+   ul.pk-list-styled > li:before {
+      content: '';
+      width: 0.25rem;
+      height: 0.25rem;
+      background: #ced4da;
+      margin-top: 0.75rem;
+      left: 1rem;
+   }
+   .pk-list-styled > li:before, .pk-list-positive > li:before, .pk-list-negative > li:before {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+   }
+   .pk-list-styled li:not(:first-child) {
+      margin-top: 0.5rem;
+   }
+   .alerta {
+      border-left: #ffc107 2px solid;
+      padding: 1.25rem 1.75rem;
+      position: relative;
+      margin-bottom: 1rem;
+      background: #F8F9FA;
+   }
+   .alerta.roja {
+      border-left: red 2px solid;
+   }
+   table {
+      width: 100%;
+      max-width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      background-color: transparent;
+      border: 0;
+   }
+   table th, table td {
+      padding: 0.75rem;
+      vertical-align: top;
+      border: none;
+      border-top: 1px solid #dee2e6;
+   }
+   .enlace {
+      box-shadow: none;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1.125em;
+      border: 2px solid;
+      background-color: #00b4fa;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+	   border-radius: 10px;
+	   padding: 0.667em 1.333em;
+	   text-align: center;
+	   text-decoration: none;
+	   word-break: break-word;
+	   box-sizing: border-box;
+      color: white;
+   }
+   .enlace:hover {
+      opacity: 0.7;
+   }
+  .enlace-compartir {
+      text-align:center;
+      font-size: 14px;
+   }
+   img.avatar {
+      border-radius: 100%;
+      max-width: 60px;
+   }
+   .special-thanks {
+      display: flex;
+      flex-direction: column;
+   }
+   .team {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 2rem;
+   }
+   .team div {
+      margin-right: 1rem;
+   }
+   .texto-gracias {
+      border-top: 1px solid #e9ecef;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+   }
+   .texto-gracias p {
+      margin-top: 0;
+   }
+   .pk-toc {
+      background: #f9f9f9;
+      border: 1px solid #aaa;
+      padding: 10px;
+      margin-bottom: 1em;
+      width: auto;
+      display: table;
+   }
+   .pk-toc a {
+      text-decoration: none;
+   }
+   .pk-toc-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.125em;
+      text-transform: uppercase;
+      color: #000000;
+      font-weight: 700;
+      justify-content: center;
+   }
+   .pk-toc ol {
+      list-style: none;
+      font-size: 16px;
+      padding-left: 0;
+   }
+   .pk-toc ol li {
+      position: relative;
+      padding-left: 2.5rem;
+   }
+   .pk-toc ul {
+      list-style: none;
+      position: relative;
+      font-size: 14px;
+   }
+   .pk-toc ul li {
+      margin-top: 0.25rem;
+   }
+   .pk-toc ul.pk-list-styled > li:before {
+      margin-top: 0.55rem;
+   }
+   .pk-toc ul.pk-list-styled > li:not(:first-child) {
+      margin-top: 0.25rem;
+   }
+   .pk-toc ol > li span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: #E9ECEF;
+      color: #495079;
+      border-radius: 100%;
+   }
+   .btn-inicio {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 9999;
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      background: #00b4fa;
+      color: #fff;
+      cursor: pointer;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: none;
+      transition: opacity 0.25s;
+   }
+   .btn-inicio:hover {
+      opacity: 0.7;
+   }
+   .btn-inicio-mostrar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+</style>
+</head>
+<body>
+   <div id="inicio"></div>
+   <a class="btn-inicio" href="#inicio"><img src="https://i.imgur.com/ajdsS7K.gif" /></a>
+   <div class="content">
+      <section>
+         <a href="https://trueroledreams.org/pack-de-mapas-para-warcraft-iii/" target="_blank"><img src="https://i.imgur.com/hxHg0Kb.jpg" width="100%" /></a>
+         <h1 class="title-stroke">&iquest;Qui&eacute;res descargar M&aacute;s Mapas?</h1>
+         <div class="fecha">
+            <ul>
+               <li>Versi&oacute;n publicada el:</li>
+               <li>15 de junio del 2022</li>
+            </ul>
+         </div>
+         <article>
+            <p>Si quieres descargar m&aacute;s mapas de Warcraft III hechos True Role Dreams visita el siguiente post:</p>
+            <div class="enlace-compartir">
+               <a class="enlace" href="https://trueroledreams.org/pack-de-mapas-para-warcraft-iii/" target="_blank"><strong>Pack de mapas para Warcraft III (Por True Role Dreams)</strong></a>
+            </div>
+            <p>Y para m&aacute;s videojuegos visitame en: <a href="https://trueroledreams.org" target="_blank">https://trueroledreams.org</a></p>
+            <hr />
+            <h2 id="como-usar">&iquest;C&oacute;mo usar?</h2>
+            <p>Coloca el mapa en la carpeta "Maps" de la carpeta "Warcraft III" (donde instalaste el videojuego) y &iexcl;listo!</p>
+            <img class="tuto" src="https://i.imgur.com/W8pquHb.jpg">
+            <hr />
+            <h2 id="agradecimientos">Agradecimientos Especiales</h2>
+            <div class="special-thanks">
+               <div class="team">
+                  <div><img class="avatar" src="https://i.imgur.com/VpNRKDo.jpg" /></div>
+                  <div><h3>GreyMcKnight</h3></div>
+               </div>
+               <div class="texto-gracias">
+                  <p>Por la tarde en la que me ense&ntilde;aste a jugar este fant&aacute;stico videojuego, su editor del mundo cambi&oacute; mi vida.</p>
+               </div>
+            </div>
+            <div class="special-thanks">
+               <div class="team">
+                  <div><a href="https://www.blizzard.com/" target="_blank"><img class="avatar" src="https://i.imgur.com/Zzmbc7J.jpg" /></a></div>
+                  <div><h3>Antigua Blizzard Entertaiment</h3></div>
+               </div>
+               <div class="texto-gracias">
+                  <p>Por haber creado este gran videojuego a temporal como todo lo bueno en la vida.</p>
+               </div>
+            </div>
+         </article>
+      </section>
+      <aside>
+         <div id="sidebar">
+            <div class="widget">
+               <h5>S&iacute;gueme o Ap&oacute;yame en:</h5>
+               <ul class="redes-sociales">
+                  <li><a class="webs-true" href="https://www.trueroledreams.org"><img src="https://i.imgur.com/DQV0das.png" width="32" /></a></li>
+                  <li><a class="face-true" href="https://www.facebook.com/TrueRoleDreams" target="_blank"><img src="https://i.imgur.com/AfPf833.png" width="32" /></a></li>
+                  <li><a class="twit-true" href="https://twitter.com/TrueRoleDreams" target="_blank"><img src="https://i.imgur.com/ti0zxRy.png" width="32" /></a></li>
+                  <li><a class="yout-true" href="https://www.youtube.com/c/TrueRoleDreams" target="_blank"><img src="https://i.imgur.com/cLVHSap.png" width="32" /></a></li>
+                  <li><a class="yout-true" href="https://ko-fi.com/trueroledreams" target="_blank"><img src="https://i.imgur.com/rXLlMeA.png" width="32" /></a></li>
+               </ul>
+               <small>Iconos de redes sociales por: <a href="https://freeicons.io/profile/3" target="_blank">icon king1</a> y <a href="https://freeicons.io/profile/3031" target="_blank">AnjuP</a></small>
+            </div>
+            <div class="widget games">
+               <h5>M&aacute;s de True Role Dreams:</h5>
+               <a href="https://trueroledreams.org/games/nlf/" target="_blank"><img src="https://i.imgur.com/ALxBKNJ.gif" /></a><br>
+               <a href="https://trueroledreams.org/games/snc/" target="_blank"><img src="https://i.imgur.com/RJNIl5p.gif" /></a>
+            </div>
+         </div>
+      </aside>
+   </div>
+   <div id="disclaimer"></div>
+   <script>
+      function offset(elt) {
+         let rect = elt.getBoundingClientRect(); 
+         let bodyElt = document.body;
+         return {
+            top: rect.top + bodyElt .scrollTop,
+            left: rect.left + bodyElt .scrollLeft
+         }
+      }
+
+      window.addEventListener("load", function(){
+         if(document.getElementById("sidebar")){
+            const sidebar = document.getElementById("sidebar");
+            const footer = document.getElementById("disclaimer");
+            const top = offset(sidebar).top;
+            const footTop = offset(footer).top;
+            const maxY = footTop - sidebar.offsetHeight
+
+            window.addEventListener("scroll", function(){
+               let y = document.scrollingElement.scrollTop;
+               if (y > top) {
+               if (y < maxY) {
+                  sidebar.classList.add("fixed")
+                  sidebar.removeAttribute('style');
+               } else {
+                  sidebar.classList.remove("fixed")
+                  sidebar.setAttribute('style', 'position: absolute; top: '+(maxY - top)+'px');
+               }
+               } else {
+               sidebar.classList.remove("fixed")
+               }
+            })
+         }
+      });
+
+      function trackScroll() {
+         var scrolled = window.pageYOffset;
+         var coords = document.documentElement.clientHeight;
+
+         if (scrolled > coords) {
+            goTopBtn.classList.add('btn-inicio-mostrar');
+         }
+         if (scrolled < coords) {
+            goTopBtn.classList.remove('btn-inicio-mostrar');
+         }
+      }
+      var goTopBtn = document.querySelector('.btn-inicio');
+
+      window.addEventListener('scroll', trackScroll);
+      goTopBtn.addEventListener('click', backToTop);
+   </script>
+</body>
+</html>
