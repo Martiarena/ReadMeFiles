@@ -1,0 +1,737 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>Neon Lightning Force | Read me</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   <style>
+      html {
+         scroll-behavior: smooth;
+      }
+      body {
+         margin: 0;
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+         font-size: 1rem;
+         font-weight: 400;
+         line-height: 1.5;
+         color: #121416;
+         text-align: left;
+         background-color: #fff;
+      }
+      h1, h2, h3, h4, h5, h6 {
+         font-family: jost,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+         font-weight: 400;
+         letter-spacing: -0.025em;
+         text-transform: none;
+         margin-top: 0;
+         margin-bottom: 0;
+      }
+      h1 {
+         font-size: 3rem;
+      }
+      h2 {
+         font-size: 2rem;
+      }
+      h3 {
+         font-size: 1.75rem;
+      }
+      h4 {
+         font-size: 1.5rem;
+      }
+      h5 {
+         font-size: 1.25rem;
+      }
+      h6 {
+         font-size: 1rem;
+      }
+      a {
+         color: #00648d;
+         transition: .2s color ease;
+      }
+      a:hover {
+         text-decoration: none;
+      }
+      .title-stroke {
+         margin-top: 16px;
+      }
+      .title-stroke:after {
+         background: url("https://i.imgur.com/VQBBwFQ.jpg") repeat-x 0 center;
+         background-size: contain;
+         max-width: 180px;
+         height: 18px;
+         display: block;
+         width: 100%;
+         margin-top: 1rem;
+         content: '';
+      }
+      .content {
+         max-width: 1200px;
+         width: 100%;
+         display: flex;
+         margin: auto;
+         justify-content: space-between;
+         padding: 4rem 0;
+      }
+      section {
+         width: 100%;
+         padding-left: 20px;
+         padding-right: 40px;
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: row;
+         justify-content: flex-start;
+      }
+      .fecha {
+         margin-top: 1rem;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         flex-wrap: wrap;
+      }
+      .fecha ul {
+         margin-top: 1rem;
+         margin-right: 0.5rem;
+         list-style: none;
+         color: #b7b9c2;
+         padding-left: 0;
+         display: flex;
+         justify-content: space-between;
+      }
+      .fecha ul li {
+         margin-right: 1rem;
+      }
+      article {
+         max-width: 680px;
+         width: 100%;
+         display: block;
+         margin: auto;
+      }
+      aside {
+         position: relative;
+         width: 100%;
+         padding-right: 20px;
+         padding-left: 20px;
+         flex: 0 0 300px;
+         max-width: 300px;
+      }
+      .widget {
+         margin: 0 0 3rem;
+      }   
+      aside h5 {
+         font-size: 0.75rem;
+         font-weight: 500;
+         letter-spacing: 0.125em;
+         text-transform: uppercase;
+         color: #000000;
+         margin-bottom: 1.5rem;
+      }
+      .advertencia {
+         display: flex;
+         flex-direction: column;
+         padding: 2rem;
+         background-color: black;
+      }
+      .advertencia h5 {
+         color: red;
+         margin-bottom: 0.25rem;
+         font-size: 1.5rem;
+      }
+      .advertencia p {
+         color: white;
+         margin-bottom: 0;
+         margin-top: 1rem;
+      }
+      .games img {
+         margin-bottom: 0.5rem;
+      }
+      .redes-sociales {
+         display: flex;
+         justify-content: flex-start;
+         list-style: none;
+         padding-left: 0;
+      }
+      .redes-sociales li {
+         margin-right: 0.4rem;
+      }
+      .redes-sociales li img {
+         width: 32px;
+         display: block;
+      }
+      hr {
+         margin-top: 3rem;
+         margin-bottom: 3rem;
+         border-top: 0;
+         border-bottom: 1px solid #0584CC;
+      }
+      .fixed {
+         position: fixed;
+      }
+      #sidebar {
+         width: 100%;
+         max-width: 300px;
+      }
+      ul.pk-list-styled {
+         list-style: none;
+         padding-left: 0;
+      }
+      ul.pk-list-styled > li {
+         position: relative;
+         padding-left: 2.5rem;
+      }
+      ul.pk-list-styled > li:before {
+         content: '';
+         width: 0.25rem;
+         height: 0.25rem;
+         background: #ced4da;
+         margin-top: 0.75rem;
+         left: 1rem;
+      }
+      .pk-list-styled > li:before, .pk-list-positive > li:before, .pk-list-negative > li:before {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: absolute;
+         left: 0;
+         top: 0;
+      }
+      .pk-list-styled li:not(:first-child) {
+         margin-top: 0.5rem;
+      }
+      .alerta {
+         border-left: #ffc107 2px solid;
+         padding: 1.25rem 1.75rem;
+         position: relative;
+         margin-bottom: 1rem;
+         background: #F8F9FA;
+      }
+      .alerta.roja {
+         border-left: red 2px solid;
+      }
+      table {
+         width: 100%;
+         max-width: 100%;
+         border-collapse: collapse;
+         margin-bottom: 1rem;
+         background-color: transparent;
+         border: 0;
+      }
+      table th, table td {
+         padding: 0.75rem;
+         vertical-align: top;
+         border: none;
+         border-top: 1px solid #dee2e6;
+      }
+      .enlace {
+         box-shadow: none;
+         cursor: pointer;
+         display: inline-block;
+         font-size: 1.125em;
+         border: 2px solid;
+         background-color: #00b4fa;
+         -webkit-border-radius: 10px;
+         -moz-border-radius: 10px;
+         border-radius: 10px;
+         padding: 0.667em 1.333em;
+         text-align: center;
+         text-decoration: none;
+         word-break: break-word;
+         box-sizing: border-box;
+         color: white;
+      }
+      .enlace:hover {
+         opacity: 0.7;
+      }
+      .enlace-compartir {
+         text-align:center;
+         font-size: 14px;
+      }
+      img.avatar {
+         border-radius: 100%;
+         max-width: 60px;
+      }
+      .special-thanks {
+         display: flex;
+         flex-direction: column;
+      }
+      .team {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         margin-top: 2rem;
+      }
+      .team div {
+         margin-right: 1rem;
+      }
+      .texto-gracias {
+         border-top: 1px solid #e9ecef;
+         margin-top: 1.5rem;
+         padding-top: 1.5rem;
+      }
+      .texto-gracias p {
+         margin-top: 0;
+      }
+      .tab-titulo-acordeon {
+         position: relative;
+         cursor: pointer;
+         padding: 0.75rem 0;
+         color: #121416;
+         border: 0px;
+         border-top: 1px solid #e9ecef;
+         text-decoration: none !important;
+         box-shadow: none !important;
+         transition: .3s;
+         display: flex;
+         align-items: center;
+      }
+      .tab-titulo-acordeon:first-child {
+         border-top: 0;
+      }
+      .tab-titulo-acordeon:after {
+         position: absolute;
+         content: "";
+         background: url("https://i.imgur.com/yHqLvrj.gif") no-repeat center;
+         color: #121416;
+         right: 0;
+         transition: transform 0.2s;
+         font-weight: 700;
+         font-size: 1.5em;
+         line-height: 1;
+         width: 10px;
+         height: 10px;
+      }
+      .tab-contenido-acordeon {
+         overflow: hidden;
+         transition: all 0.2s ease-out; 
+         max-height: 0;
+         height: auto;
+         color: #121416;
+         font-family: inherit;
+         font-size: 0.875rem;
+         letter-spacing: inherit;
+      }
+      .tab-titulo-acordeon.open ~ .tab-contenido-acordeon .contenido-acor {
+         padding: .75rem 0;
+      }
+      .tab-titulo-acordeon.open:after {
+         transform: rotate(90deg);
+      }
+      .tab-titulo-acordeon.open + .tab-contenido-acordeon {
+         max-height: 1000px;
+      }
+      .pk-toc {
+         background: #f9f9f9;
+         border: 1px solid #aaa;
+         padding: 10px;
+         margin-bottom: 1em;
+         width: auto;
+         display: table;
+      }
+      .pk-toc a {
+         text-decoration: none;
+      }
+      .pk-toc-title {
+         display: flex;
+         align-items: center;
+         margin-bottom: 1.5rem;
+         font-size: 0.75rem;
+         letter-spacing: 0.125em;
+         text-transform: uppercase;
+         color: #000000;
+         font-weight: 700;
+         justify-content: center;
+      }
+      .pk-toc ol {
+         list-style: none;
+         font-size: 16px;
+         padding-left: 0;
+      }
+      .pk-toc ol li {
+         position: relative;
+         padding-left: 2.5rem;
+      }
+      .pk-toc ul {
+         list-style: none;
+         position: relative;
+         font-size: 14px;
+      }
+      .pk-toc ul li {
+         margin-top: 0.25rem;
+      }
+      .pk-toc ul.pk-list-styled > li:before {
+         margin-top: 0.55rem;
+      }
+      .pk-toc ul.pk-list-styled > li:not(:first-child) {
+         margin-top: 0.25rem;
+      }
+      .pk-toc ol > li span {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 1.5rem;
+         height: 1.5rem;
+         background-color: #E9ECEF;
+         color: #495079;
+         border-radius: 100%;
+      }
+      .btn-inicio {
+         position: fixed;
+         bottom: 2rem;
+         right: 2rem;
+         z-index: 9999;
+         width: 35px;
+         height: 35px;
+         text-align: center;
+         background: #00b4fa;
+         color: #fff;
+         cursor: pointer;
+         -webkit-border-radius: 5px;
+         -moz-border-radius: 5px;
+         border-radius: 5px;
+         text-decoration: none;
+         display: none;
+         transition: opacity 0.25s;
+      }
+      .btn-inicio:hover {
+         opacity: 0.7;
+      }
+      .btn-inicio-mostrar {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+   </style>
+   <script>
+      function acordeon (target, one) {
+         target = document.getElementById(target);
+         target.classList.add("awrap");
+      
+         if (typeof one != "boolean") { one = false; }
+         let head = target.getElementsByClassName("tab-titulo-acordeon");
+      
+         if (one) {
+            for (let h of head) {
+               h.addEventListener("click", function(){
+                  for (let e of head) { 
+                     if (e != this) { e.classList.remove("open");  }
+                     else { this.classList.toggle("open"); }
+                  }
+               });
+            }
+         } else {
+            for (let h of head) {
+               h.addEventListener("click", function(){
+               this.classList.toggle("open");
+               });
+            }
+         }
+      }
+   </script>
+</head>
+<body>
+   <div id="inicio"></div>
+   <a class="btn-inicio" href="#inicio"><img src="https://i.imgur.com/ajdsS7K.gif" /></a>
+   <div class="content">
+      <section>
+         <a href="http://trueroledreams.org/games/nlf/home.php?cod_idioma=1" target="_blank"><img src="http://i.imgur.com/jKkRFdd.jpg" width="100%" /></a>
+         <h1 class="title-stroke">About Neon Lightning Force 1.4</h1>
+         <div class="fecha">
+            <ul>
+               <li>Version Released at:</li>
+               <li>April 25 of 2021</li>
+            </ul>
+         </div>
+         <article>
+            <p>This is the third version of the game from the release date, if you found more <a href="#bug-sin-solucion" target="_blank">not listed bug or glitch</a>, reports them at <a href="https://trueroledreams.org/" target="_blank">trueroledreams.org</a>.</p>
+            <div class="pk-toc">
+               <h5 class="pk-toc-title">Table of Contents</h5>
+               <ol>
+                  <li>
+                     <span>1</span><a href="#novedades">What's news with this version?</a>
+                     <ul class="pk-list-styled">
+                        <li>
+                           <a href="#actualizar">Upgrade to this version without losing progress or unlockables</a>
+                        </li>
+                        <li>
+                           <a href="#comparte">Share the game</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <span>2</span><a href="#configuracion">Default Control Settings</a>
+                     <ul class="pk-list-styled">
+                        <li>
+                           <a href="#problemas-control"><strong>Controller Issues</strong></a>
+                        </li>
+                        <li>
+                           <a href="#incompatibilidad-control">Possible incompatibility with Xbox controllers</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <span>3</span><a href="#bug-sin-solucion">List of bugs and glitches unfixed</a>
+                  </li>
+                  <li>
+                     <span>4</span><a href="#creditos">Credits and Resources</a>
+                  </li>
+                  <li>
+                     <span>5</span><a href="#jugar-en-android"><strong>How to play on Android</strong></a>
+                  </li>
+               </ol>
+            </div>
+            <h2 id="novedades">What's news with this version?</h2>
+            <ul class="pk-list-styled">
+               <li>Color palette fixed for the intro scene.</li>
+               <li>True Role Dreams logo updated!</li>
+               <li>Slight changes in the initial stage.</li>
+               <li>Enhanced music quality.</li>
+               <li>Fixed the bug at connect control, unset the second player by default.</li>
+            </ul>
+            <h3 id="actualizar">Upgrade to this version without losing progress or unlockables</h3>
+            <p>Simply replace the new "Saves" folder with the "Saves" folder from the previous version, you will keep not just the progress and unlockables but also the score and control settings.</p>
+            <h3 id="comparte">Share the game</h3>
+            <p>I would appreciate the disclosure and recommendation of the game, but please do it using its official website link:</p>
+            <div class="enlace-compartir">
+               <a class="enlace" href="https://trueroledreams.org/games/nlf/index.php?cod_idioma=1" target="_blank"><strong>Neon Lightning Force official website</strong></a>
+            </div>
+            <p><strong>The official website will always give you the last version of the video game</strong> and if the download link is broken, you can report it immediately at <a href="mailto:trueroledreams@gmail.com">trueroledreams@gmail.com</a>.</p>
+            <hr />
+            <h2 id="configuracion">Default Control Settings</h2>
+            <p>For being a PC video game, the default controls are from keyboard but you can set it to your liking if you want to use a joystick:</p>
+            <table width="100%" border="1" cellpadding="0" cellspacing="0">
+               <tr>
+                  <th width="25%">Command</th>
+                  <th width="75%">Key</th>
+               </tr>
+               <tr>
+                  <td>Up</td>
+                  <td>&uarr;</td>
+               </tr>
+               <tr>
+                  <td>Down</td>
+                  <td>&darr;</td>
+               </tr>
+               <tr>
+                  <td>Left</td>
+                  <td>&larr;</td>
+               </tr>
+               <tr>
+                  <td>Right</td>
+                  <td>&rarr;</td>
+               </tr>
+               <tr>
+                  <td>Attack</td>
+                  <td>V</td>
+               </tr>
+               <tr>
+                  <td>Extra 1</td>
+                  <td>G</td>
+               </tr>
+               <tr>
+                  <td>Extra 2</td>
+                  <td>X</td>
+               </tr>
+               <tr>
+                  <td>Special</td>
+                  <td>C</td>
+               </tr>
+               <tr>
+                  <td>Jump</td>
+                  <td>B</td>
+               </tr>
+               <tr>
+                  <td>Block</td>
+                  <td>N</td>
+               </tr>
+               <tr>
+                  <td>Start</td>
+                  <td>Enter</td>
+               </tr>
+            </table>
+            <div class="alerta roja">
+               <h3 id="problemas-control"><strong>Controller Issues</strong></h3>
+               <p>If you have problems with the control settings just delete the "Saves" folder (or just delete the "Neon_Lightning_Force_(E).cfg" file).</p>
+               <p>The OpenBOR configuration will go to default, so you can configure everything again.</p>
+               <p>Here is a <a href="#" target="_blank">video tutorial on how to setup the gamepads</a>, it works for all OpenBOR games created by True Role Dreams.</p>
+            </div>
+            <div class="alerta">
+               <h3 id="incompatibilidad-control">Possible incompatibility with Xbox controllers</h3>
+               <p>This game runs on OpenBOR, a freeware software developed by Senile Team, and I think the developers <a href="http://www.chronocrash.com/forum/index.php?topic=4005.0" target="_blank">still have problems with certain peripherals</a>. So I recommend using a PC joystick or keyboard to play, those are the devices which this game was tested.</p>
+            </div>
+            <hr />
+            <h2 id="bug-sin-solucion">List of bugs and glitches unfixed</h2>
+            <p>I don't know when I will correct these errors, but if you find very notorious glitches or bugs that crash the video game, report them on the True Role Dreams <a href="https://trueroledreams.org/en/contact/" target="_blank">contact page</a>:</p>
+            <h3 style="color:#F90">Glitches List</h3>
+            <ul class="pk-list-styled">
+               <li><strong>Grabattacks</strong><br />
+                  After long hours looking for the glitch, I haven't been able to find out why the enemies are released before receiving the blow, there are fews probabilities that the glitch show down.</li>
+            </ul>
+            <h3 style="color:#F00">Bug List</h3>
+            <ul class="pk-list-styled">
+               <li><strong>Thundervolt's feather:</strong><br>
+                  I use some unestable code to summon Steven's pet, the players who gets the item "Thundervolt's feather" can act "strange" for a few seconds. I recomend to wait a little until the eagle flyes from the ground, unless you want that your character get freeze. If the character freeze he will recover his movement if you wait but I don't know if it will freeze forever sometimes, in the case that happen you can wait until the time over that kill your character and let you recover the control over him.</li>
+               <li><strong>Bike bonus game 2 Players mode:</strong><br>
+                  This can shut down the game if a second player gets into the game, or use a credit, while the bike bonus stage. There's no glitch if both players gets into the game before or after the bike bonus stage.</li>
+            </ul>
+            <p><strong>NOTE:</strong> Bugs and glitches are only for the PC version, I am not responsible for bugs caused by OpenBOR emulators on consoles, android or other devices.</p>
+            <hr />
+            <h2 id="creditos">Credits and Resources</h2>
+            <p>Graphics, music and sound effects belong to the following listed games:</p>
+            <div id="todos-abiertos">
+               <div class="tab-titulo-acordeon">Graphics</div>
+               <div class="tab-contenido-acordeon">
+                  <div class="contenido-acor">
+                     <p>From spriters-resource.com & spritedatabase.net:</p>
+                     <ul class="pk-list-styled">
+                        <li>Final Fight 1 & 2</li>
+                        <li>Street of Rage 2</li>
+                        <li>Pretty Soldier Sailor Moon</li>
+                        <li>Karnov's Revenge</li>
+                        <li>Double Dragon</li>
+                        <li>Savage Reign</li>
+                        <li>Fight Fever</li>
+                        <li>Guardians</li>
+                        <li>Street Fighter 2</li>
+                        <li>Ghost Chaser Densei</li>
+                        <li>Cadillacs & Dinosaurs</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="tab-titulo-acordeon">Music</div>
+               <div class="tab-contenido-acordeon">
+                  <div class="contenido-acor">
+                     <ul class="pk-list-styled">
+                        <li>Ryo ga Gotoku</li>
+                        <li>Ryo ga Gotoku 2</li>
+                        <li>Ryo ga Gotoku 3</li>
+                        <li>Ryo ga Gotoku 4</li>
+                        <li>Ryo ga Gotoku 5</li>
+                        <li>King of Fighters</li>
+                        <li>Crisis Beat</li>
+                        <li>Bakuretsu Tenshi</li>
+                        <li>The Bouncer</li>
+                        <li>Crimson Tears</li>
+                     </ul>
+                     <p>Ending Theme:</p>
+                     <ul class="pk-list-styled">
+                        <li>[BLOODY MOON] (by Gospel of Judas)</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="tab-titulo-acordeon">Sound Effect</div>
+               <div class="tab-contenido-acordeon">
+                  <div class="contenido-acor">
+                     <ul class="pk-list-styled">
+                        <li>Final Fight</li>
+                        <li>Streets of Rage 2</li>
+                        <li>Guardians</li>
+                        <li>Denjin Makai</li>
+                        <li>Ghost Chaser Densei</li>
+                        <li>Crimson Tears</li>
+                        <li>Cadillacs & Dinosaurs</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="tab-titulo-acordeon">Engine Used</div>
+               <div class="tab-contenido-acordeon">
+                  <ul class="pk-list-styled">
+                     <li>Beats of Rage (OpenBOR)</li>
+                  </ul>
+               </div>
+            </div>
+            <hr />
+            <h2 id="jugar-en-android"><strong>How to play on Android</strong></h2>
+            <p>There isn't an official apk to play Neon Lightning Force on Android currently, but it's possible to play it using an OpenBOR Emulator (which is the engine I used to create this videogame).</p>
+            <p><a href="https://trueroledreams.org/en/play-openbor-games-on-your-android/" target="_blank">Check this tutorial to install the emulator</a> and .pak files (these are the games "roms" created with OpenBOR).</p>
+            <p><strong>There is a version of Neon Lightning Force that I created. especially for playing on the emulator <a href="https://trueroledreams.org/games/nlf/index.php?cod_idioma=1" target="_blank">Download it from the official website</a>.</strong></p>
+         </article>
+      </section>
+      <aside>
+         <div id="sidebar">
+            <div class="advertencia widget">
+               <h5 style="color:orange;"><strong>Note:</strong></h5>
+               <p>In 2023, I'll release a new version of this game, fixing many video game design errors that I made will be fixed (I'll change from scenarios and boss fights a little), it will be the definitive version.</p>
+               <p>A thousand apologies for the inconvenience.</p>
+            </div>
+            <div class="widget">
+               <h5>Follow me or support me on:</h5>
+               <ul class="redes-sociales">
+                  <li><a class="webs-true" href="https://www.trueroledreams.org"><img src="https://i.imgur.com/DQV0das.png" width="32" /></a></li>
+                  <li><a class="face-true" href="https://www.facebook.com/TrueRoleDreams" target="_blank"><img src="https://i.imgur.com/AfPf833.png" width="32" /></a></li>
+                  <li><a class="twit-true" href="https://twitter.com/TrueRoleDreams" target="_blank"><img src="https://i.imgur.com/ti0zxRy.png" width="32" /></a></li>
+                  <li><a class="yout-true" href="https://www.youtube.com/c/TrueRoleDreams" target="_blank"><img src="https://i.imgur.com/cLVHSap.png" width="32" /></a></li>
+                  <li><a class="yout-true" href="https://ko-fi.com/trueroledreams" target="_blank"><img src="https://i.imgur.com/rXLlMeA.png" width="32" /></a></li>
+               </ul>
+               <small>Social media icons by: <a href="https://freeicons.io/profile/3" target="_blank">icon king1</a> & <a href="https://freeicons.io/profile/3031" target="_blank">AnjuP</a></small>
+            </div>
+            <div class="widget games">
+               <h5>More True Role Dreams Games:</h5>
+               <a href="https://trueroledreams.org/en/warcraft-iii-map-pack/" target="_blank"><img src="https://i.imgur.com/hJeuRaD.gif" /></a><br>
+               <a href="https://trueroledreams.org/games/snc/" target="_blank"><img src="https://i.imgur.com/RJNIl5p.gif" /></a>
+            </div>
+         </div>
+      </aside>
+   </div>
+   <div id="disclaimer"></div>
+   <script>
+      function offset(elt) {
+         let rect = elt.getBoundingClientRect(); 
+         let bodyElt = document.body;
+         return {
+            top: rect.top + bodyElt .scrollTop,
+            left: rect.left + bodyElt .scrollLeft
+         }
+      }
+
+      window.addEventListener("load", function(){
+         if(document.getElementById("sidebar")){
+            const sidebar = document.getElementById("sidebar");
+            const footer = document.getElementById("disclaimer");
+            const top = offset(sidebar).top;
+            const footTop = offset(footer).top;
+            const maxY = footTop - sidebar.offsetHeight
+
+            window.addEventListener("scroll", function(){
+               let y = document.scrollingElement.scrollTop;
+               if (y > top) {
+               if (y < maxY) {
+                  sidebar.classList.add("fixed")
+                  sidebar.removeAttribute('style');
+               } else {
+                  sidebar.classList.remove("fixed")
+                  sidebar.setAttribute('style', 'position: absolute; top: '+(maxY - top)+'px');
+               }
+               } else {
+               sidebar.classList.remove("fixed")
+               }
+            })
+         }
+      });
+
+      window.addEventListener("DOMContentLoaded", function(){
+         acordeon("todos-abiertos");
+         acordeon("solo-uno-abierto", true);
+      });
+
+      function trackScroll() {
+         var scrolled = window.pageYOffset;
+         var coords = document.documentElement.clientHeight;
+
+         if (scrolled > coords) {
+            goTopBtn.classList.add('btn-inicio-mostrar');
+         }
+         if (scrolled < coords) {
+            goTopBtn.classList.remove('btn-inicio-mostrar');
+         }
+      }
+      var goTopBtn = document.querySelector('.btn-inicio');
+
+      window.addEventListener('scroll', trackScroll);
+      goTopBtn.addEventListener('click', backToTop);
+   </script>
+</body>
+</html>
